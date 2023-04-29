@@ -26,7 +26,8 @@ int main(int argc, char* argv[]) {
             default:
                 // invocazione della funzione di gestione passando come parametro l'argomento restituito da getopt
                 if (fun[opt%4]( (optarg==NULL ? argv[0] : optarg) ) == -1) {
-
+                    printf("Error in argument types");
+                    return -1;
                 }
         }
     }
